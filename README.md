@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 
-  <h3 align="center">SaturnBay Estates</h3>
+<h3 align="center">SaturnBay Estates</h3>
 
    <div align="center">
      Real Estate app made with Google Authentication, dynamic routing, and more. Mastering essential skills for scalable and clean React Native development.
@@ -52,7 +52,7 @@ A full-stack Real Estate application with React Native, featuring Google authent
 
 👉 **Centralized Data Fetching**: Custom-built solution inspired by TanStack’s useQuery for efficient API calls.
 
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
 
 ## <a name="quick-start">🚀 Quick Start</a>
 
@@ -66,7 +66,7 @@ Make sure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
-**Installation** 
+**Installation**
 
 ```bash
 npm install
@@ -89,7 +89,7 @@ EXPO_PUBLIC_APPWRITE_PROPERTIES_COLLECTION_ID=
 Replace the values with your actual Appwrite credentials. You can obtain these credentials by signing up & creating a new project on the [Appwrite website](https://apwr.dev/JSM050).
 
 **Start the app**
-   
+
 ```bash
  npx expo start
 ```
