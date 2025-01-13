@@ -4,6 +4,7 @@ import { useFonts } from "expo-font";
 
 
 import "./global.css";
+import GlobalProvider from "@/lib/global-provider";
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -26,8 +27,8 @@ export default function RootLayout() {
   }
 
   return (
-
+      <GlobalProvider>
         <Stack screenOptions={{ headerShown: false }} />
-
+      </GlobalProvider>
   );
 }
