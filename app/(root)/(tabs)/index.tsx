@@ -5,6 +5,7 @@ import {useGlobalContext} from "@/lib/global-provider";
 import images from "@/constants/images";
 import icons from "@/constants/icons";
 import Search from "@/components/Search";
+import {Card, FeaturedCard} from "@/components/Cards";
 
 
 export default function Index() {
@@ -37,6 +38,9 @@ export default function Index() {
             </View>
         </View>
         </View>
+
+        <FeaturedCard />
+        <Card />
     </SafeAreaView>
   );
 }
