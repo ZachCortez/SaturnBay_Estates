@@ -1,4 +1,4 @@
-import {Image, Text, View} from "react-native";
+import {Image, Text, View, TouchableOpacity} from "react-native";
 import { Link } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {useGlobalContext} from "@/lib/global-provider";
@@ -23,8 +23,20 @@ export default function Index() {
                 </View>
                 <Image source={icons.bell} className="size-6"/>
             </View>
-        </View>
         <Search />
+        <View className="my-5">
+            <View className="flex flex-row items-center justify-between">
+                <Text className="text-xl font-rubik-bold text-black-300">
+                    Featured
+                </Text>
+                <TouchableOpacity>
+                    <Text className="text-base font-rubik-bold text-primary-300">
+                        See all
+                    </Text>
+                </TouchableOpacity>
+            </View>
+        </View>
+        </View>
     </SafeAreaView>
   );
 }
