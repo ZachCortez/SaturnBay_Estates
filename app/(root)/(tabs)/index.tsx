@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import {useGlobalContext} from "@/lib/global-provider";
 import images from "@/constants/images";
 import icons from "@/constants/icons";
+import Search from "@/components/Search";
 
 
 export default function Index() {
@@ -23,6 +24,7 @@ export default function Index() {
                 <Image source={icons.bell} className="size-6"/>
             </View>
         </View>
+        <Search />
     </SafeAreaView>
   );
 }
