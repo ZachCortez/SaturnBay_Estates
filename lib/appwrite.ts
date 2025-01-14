@@ -3,7 +3,7 @@ import * as Linking from 'expo-linking';
 import {openAuthSessionAsync} from "expo-web-browser";
 
 export const config = {
-    platform: 'com.SaturnBay.Estates',
+    platform: 'com.saturnbay.estates',
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
     projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
 }
@@ -15,8 +15,8 @@ client
     .setProject(config.projectId!)
     .setPlatform(config.platform!)
 
-export const account = new Account(client);
 export const avatar = new Avatars(client);
+export const account = new Account(client);
 
 export async function login() {
     try {
@@ -34,7 +34,7 @@ export async function login() {
             redirectUri,
         )
 
-        if(browserResult.type  !== 'success') throw new Error('Failed to login');
+        if(browserResult.type !== 'success') throw new Error('Failed to login');
 
         const url = new URL(browserResult.url);
 
@@ -43,7 +43,7 @@ export async function login() {
 
         if(!secret || !userId) throw new Error('Failed to login');
 
-        const session = await account.createSession(secret, userId);
+        const session = await account.createSession(userId, secret);
 
         if(!session) throw new Error('Failed to create a session');
 
@@ -68,6 +68,7 @@ export async function logout() {
 export async function getCurrentUser() {
     try {
         const response = await account.get();
+
         if (response.$id) {
             const userAvatar = avatar.getInitials(response.name);
 
@@ -77,7 +78,6 @@ export async function getCurrentUser() {
             };
         }
 
-        return null;
     } catch (error) {
         console.log(error);
         return null;
