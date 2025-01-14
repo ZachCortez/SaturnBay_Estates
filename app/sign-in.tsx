@@ -19,7 +19,7 @@ const SignIn = () => {
             refetch();
             console.log('✅  |  Login Success');
         } else {
-            Alert.alert('Error', '🚫Failed to Login')
+            Alert.alert('Error', '🚫 |  Failed to Login')
         }
     };
     return (
