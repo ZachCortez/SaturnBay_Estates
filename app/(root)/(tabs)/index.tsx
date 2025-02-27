@@ -1,4 +1,4 @@
-import {Image, Text, View, TouchableOpacity, FlatList} from "react-native";
+import {Button, Image, Text, View, TouchableOpacity, FlatList} from "react-native";
 import { Link } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {useGlobalContext} from "@/lib/global-provider";
@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <SafeAreaView className="bg-white h-full">
         <FlatList
-            data={[1, 2, 3, 4, 5]}
+            data={[1, 2, 3, 4]}
             numColumns={2}
             renderItem={({item}) => <Card/>}
             keyExtractor={(item) => item.toString()}
@@ -47,7 +47,7 @@ export default function Index() {
                         </View>
 
                         <FlatList
-                            data={[1, 2, 3]}
+                            data={[5, 6, 7]}
                             renderItem={({ item }) => (
                                 <FeaturedCard />
                             )}
